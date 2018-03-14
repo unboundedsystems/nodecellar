@@ -1,0 +1,33 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "runtimeExecutable": "${workspaceFolder}/bin/node",
+            "program": "${workspaceFolder}/dist/index.js",
+            "runtimeArgs": [
+                "--inspect-brk=0.0.0.0:5858"
+            ],
+            "args": [
+            ],
+            "env":{
+                // Expose port 5858 for debugging
+                // Expose port 3000 for the app's web interface
+                // Link this container to the container named postgres
+                "DOCKER_ARGS": "-p5858:5858 -p3000:3000 --link postgres:postgres"
+            },
+            "port": 5858,
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ],
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/src",
+            "preLaunchTask": "watch-build",
+        }
+    ]
+}

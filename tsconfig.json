@@ -1,0 +1,19 @@
+{
+  "include": [
+    "src/**/*",
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    //"noImplicitAny": true,
+    "noImplicitThis": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "target": "es6",
+  }
+}
