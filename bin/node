@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-IMAGE="node:8"
+IMAGE="node:8.10-alpine"
 BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "${BIN_DIR}/../containit/containit.sh"
